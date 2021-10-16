@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: signfont;
+    src: url(./font/sign-font.otf);
+}
+
+.signfont {
+    font-family: 'signfont';
+}
+
+#page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-img {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(./img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+}
+
+.logo-header {
+    color: aliceblue;
+    font-size: 50px;
+    padding: 7px 5px;
+    position: absolute;
+    top: 0%;
+    left: 10px;
+}
+
+
+/* loader */
+
+.content {
+    font-family: 'poppins';
+    position: relative;
+}
+
+.content h2 {
+    position: absolute;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3.5em;
+    line-height: 50px;
+}
+
+.content h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,
+    100% {
+        clip-path: polygon(0% 42%, 16% 48%, 28% 52%, 44% 54%, 61% 51%, 71% 41%, 85% 30%, 99% 27%, 100% 27%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 67%, 19% 69%, 35% 72%, 49% 74%, 60% 69%, 75% 59%, 83% 54%, 95% 51%, 100% 54%, 100% 100%, 1% 100%);
+    }
+}
+
+@media only screen and (min-width:720px) {
+    .content h2 {
+        font-size: 5em;
+        line-height: 65px;
+    }
+    .logo-header {
+        font-size: 55px;
+    }
+}
+
+
+/*  */
+
+a {
+    cursor: pointer;
+}
+
+.btt {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+button {
+    background: rgba(0, 0, 255, 0.685);
+    color: #03a9f4;
+    border: 0;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'poppins';
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button p svg {
+    margin: 0 4px;
+}
